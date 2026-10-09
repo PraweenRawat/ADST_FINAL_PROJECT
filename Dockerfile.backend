@@ -1,0 +1,22 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY backend/requirements.txt ./backend/requirements.txt
+RUN pip install --no-cache-dir -r backend/requirements.txt
+
+# Copy backend source
+COPY backend/ ./backend/
+
+# Copy required artifacts maintaining the directory structure expected by backend/app/services/services.py
+COPY models/ ./models/
+COPY reports/ ./reports/
+COPY data/processed/ ./data/processed/
+
+# Set Python path so 'backend.app' can be resolved
+ENV PYTHONPATH=/app/backend
+
+EXPOSE 8000
+
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

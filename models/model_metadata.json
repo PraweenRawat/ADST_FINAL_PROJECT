@@ -1,0 +1,47 @@
+{
+  "model_name": "RandomForestRegressor",
+  "target": "Demand",
+  "features": [
+    "hour",
+    "day_of_week",
+    "month",
+    "is_weekend",
+    "ChargerType",
+    "ChargerCompany",
+    "Location"
+  ],
+  "training_date": "2026-10-08T00:38:52.952515",
+  "validation_metrics": {
+    "Model": "RandomForestRegressor",
+    "Dataset": "validation",
+    "MAE": 9.9815,
+    "RMSE": 13.1248,
+    "R2": 0.1361
+  },
+  "test_metrics": {
+    "MAE": 10.0264,
+    "RMSE": 13.2055,
+    "R2": 0.0747
+  },
+  "feature_importances": {
+    "num__hour": 0.436315,
+    "num__month": 0.146068,
+    "num__day_of_week": 0.099378,
+    "num__ChargerType": 0.050983,
+    "num__ChargerCompany": 0.040891,
+    "cat__Location_market": 0.036872,
+    "cat__Location_hotel": 0.027035,
+    "cat__Location_camping": 0.026167,
+    "cat__Location_public area": 0.02399,
+    "cat__Location_public institution": 0.020502,
+    "cat__Location_apartment": 0.020078,
+    "cat__Location_resort": 0.01795,
+    "cat__Location_company": 0.015635,
+    "num__is_weekend": 0.012291,
+    "cat__Location_restaurant": 0.010013,
+    "cat__Location_golf": 0.00688,
+    "cat__Location_public parking lot": 0.005104,
+    "cat__Location_sightseeing": 0.003815,
+    "cat__Location_bus garage": 3.3e-05
+  }
+}
