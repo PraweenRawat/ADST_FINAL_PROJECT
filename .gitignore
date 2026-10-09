@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+
+# Node / React
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project Specific (Optional: prevent raw massive data if it's too large for GitHub)
+# data/raw/ 
+# scratch/
+.gemini/
+*.log
